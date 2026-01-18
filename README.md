@@ -23,11 +23,15 @@ docker run -d -p 8080:80 --name httpshswf-network-app httpshswf-network
 # not access http://<EC2_PUBLIC_IP:8080 
 <img width="1919" height="1079" alt="Screenshot 2026-01-18 154900" src="https://github.com/user-attachments/assets/ce634e5b-e550-4b93-bc59-bb09e23f07ff" />
 
-# for Kubernetes
+# for Kubernetes deployment
 kubectl apply -f deployment.yml
+# for Kubernetes srvice 
 kubectl apply -f service.yml
+# for check deployment
 kubectl get deployments
+# for check running pods 
 kubectl get pods
+# for check servce running 
 kubectl get svc
 # Access Your Application
 http://<NODE_IP>:30080
