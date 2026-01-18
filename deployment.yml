@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpshswf-network-deployment
+  labels:
+    app: httpshswf-network
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: httpshswf-network
+  template:
+    metadata:
+      labels:
+        app: httpshswf-network
+    spec:
+      containers:
+        - name: httpshswf-network
+          image: adityasharmaducat007/httpshswf-network:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
